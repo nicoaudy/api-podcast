@@ -9,7 +9,7 @@ class PodcastController extends Controller
 {
     public function index()
     {
-        $podcasts = Podcast::latest()->paginate(2);
+        $podcasts = Podcast::latest()->paginate(1);
         return fractal($podcasts, new PodcastTransformer())->toArray();
     }
 
